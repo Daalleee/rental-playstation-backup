@@ -9,15 +9,10 @@ class Aksesoris extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'idAksesoris',
-        'jenis',
-        'jumlah',
-        'kondisi',
-        'status',
-    ];
+    protected $fillable = ['jenis', 'jumlah', 'kondisi', 'status'];
+
     public function detailTransaksis()
     {
-        return $this->hasMany(DetailTransaksi::class, 'aksesoris_id');
+        return $this->hasMany(DetailTransaksi::class);
     }
 }
