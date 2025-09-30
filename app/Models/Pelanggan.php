@@ -9,18 +9,17 @@ class Pelanggan extends Model
 {
     use HasFactory;
 
-
-
     protected $fillable = [
         'nama',
         'alamat',
-        'noTelp',
+        'no_telp',
         'email',
         'username',
-        'password',
+        'password'
     ];
+
     public function transaksis()
     {
-        return $this->hasMany(Transaksi::class, 'pelanggan_id');
+        return $this->hasMany(Transaksi::class);
     }
 }

@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pelanggans', function (Blueprint $table) {
+        Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 100);
-            $table->text('alamat')->nullable();
-            $table->string('no_telp', 15);
-            $table->string('email', 100)->unique();
-            $table->string('username', 50)->unique();
-            $table->string('password', 255);
+            $table->string('judul', 100);
+            $table->string('platform', 20);
+            $table->string('kondisi', 20);
+            $table->string('status', 20);
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pelanggans');
+        Schema::dropIfExists('games');
     }
 };
