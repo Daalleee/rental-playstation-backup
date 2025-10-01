@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nomor_seri', 20);
             $table->string('tipe_ps', 20);
             $table->string('kondisi', 20);
-            $table->string('status', 20);
+            $table->string('status', 20)->default('Tersedia');
             $table->timestamps();
         });
     }

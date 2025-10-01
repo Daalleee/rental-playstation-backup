@@ -9,7 +9,7 @@ class Aksesoris extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['jenis', 'jumlah', 'kondisi', 'status'];
+    protected $fillable = ['jenis', 'jumlah', 'kondisi', 'status', 'foto'];
 
     public function detailTransaksis()
     {
